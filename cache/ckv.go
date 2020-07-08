@@ -21,6 +21,7 @@ type ICache interface{
     Expire(key string,exp time.Duration) error
     Get(key string) (interface{}, error)
     GetAll() map[string]interface{}
+    Del(key string) (bool,error)
     Exist(key string) bool
     Keys() []string
     Len() int
