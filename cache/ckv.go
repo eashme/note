@@ -3,6 +3,7 @@ package cache
 /*
     @Time : 2020-7-8 08:05 下午
     @Author : jake
+    @Target : 简洁 简洁 还tm是 简洁 ！
     手动实现的一个 内存存储, 尝试解决 缓存遇到的 部分问题
     v1.0.0
     * 可以添加 Redis的 部分 MaxMemory 策略, 如何快速定位到即将过期的 key ? 栈 ?
