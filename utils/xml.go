@@ -91,7 +91,7 @@ func encodeField(w io.Writer, f reflect.StructField, v reflect.Value) error {
 	k := v.Kind()
 	switch k {
 	case reflect.String: // string类型需要使用 ![CDATA[xxx]] 进行包裹
-		_, err = w.Write([]byte("![CDATA[" + v.String() + "]]"))
+		_, err = w.Write([]byte("<![CDATA[" + v.String() + "]]>"))
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
 		_, err = w.Write([]byte(strconv.FormatInt(v.Int(), 10)))
 	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64:
